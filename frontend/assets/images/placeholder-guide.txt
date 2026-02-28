@@ -1,0 +1,30 @@
+PLACEHOLDER IMAGE GUIDE
+========================
+
+Quick URLs to use while developing (replace with real images later):
+
+HERO DASHBOARD:
+https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop
+https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop
+
+USER AVATARS:
+https://i.pravatar.cc/200?img=1
+https://i.pravatar.cc/200?img=5
+https://i.pravatar.cc/200?img=9
+
+SOCIAL MEDIA ICONS (Use Font Awesome or Simple Icons):
+Instagram: https://cdn.simpleicons.org/instagram/E4405F
+TikTok: https://cdn.simpleicons.org/tiktok/000000
+YouTube: https://cdn.simpleicons.org/youtube/FF0000
+Twitter: https://cdn.simpleicons.org/x/000000
+
+FEATURE ICONS (Heroicons CDN):
+Use: https://heroicons.com/ and download SVGs
+
+Or use emoji as temporary placeholders:
+📊 Analytics
+⚙️ Automation
+🎯 Targeting
+📅 Content
+❤️ Engagement
+📈 Reporting

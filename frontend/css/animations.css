@@ -1,0 +1,304 @@
+/* ============================================
+   ENHANCED UI EFFECTS & ANIMATIONS
+   ============================================ */
+
+/* Animated Gradient Background for Hero */
+.hero-section {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glowing Text Effect */
+.hero-section .highlight {
+    text-shadow: 0 0 20px rgba(252, 211, 77, 0.5),
+                 0 0 40px rgba(252, 211, 77, 0.3);
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% { 
+        text-shadow: 0 0 20px rgba(252, 211, 77, 0.5), 
+                     0 0 40px rgba(252, 211, 77, 0.3); 
+    }
+    50% { 
+        text-shadow: 0 0 30px rgba(252, 211, 77, 0.8), 
+                     0 0 60px rgba(252, 211, 77, 0.5); 
+    }
+}
+
+/* Badge Pulse Animation */
+.hero-badge,
+.cta-badge,
+.pricing-card-featured .badge {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Button Shine Effect */
+.btn-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+    z-index: -1;
+}
+
+.btn-gradient:hover::after {
+    left: 100%;
+}
+
+/* Card Entrance Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card,
+.pricing-card,
+.service-card,
+.testimonial-card,
+.step-card {
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+.feature-card:nth-child(5) { animation-delay: 0.5s; }
+.feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Icon Bounce on Hover */
+.feature-card:hover .icon-box {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(-5deg); }
+    50% { transform: scale(1.15) rotate(5deg); }
+    75% { transform: scale(1.1) rotate(-5deg); }
+}
+
+/* Gradient Border Animation */
+@keyframes borderGlow {
+    0%, 100% { 
+        box-shadow: 0 0 0 4px rgba(233, 30, 140, 0.15), 
+                    0 8px 30px rgba(233, 30, 140, 0.3); 
+    }
+    50% { 
+        box-shadow: 0 0 0 6px rgba(233, 30, 140, 0.25), 
+                    0 12px 40px rgba(233, 30, 140, 0.4); 
+    }
+}
+
+.pricing-card:hover {
+    animation: borderGlow 2s ease-in-out infinite;
+}
+
+/* Service Card Icon Rotation */
+.service-card:hover .service-icon {
+    animation: rotate360 0.6s ease;
+}
+
+@keyframes rotate360 {
+    from { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    to { transform: rotate(360deg) scale(1.15); }
+}
+
+/* Step Number Pulse */
+.step-number {
+    animation: stepPulse 2s ease-in-out infinite;
+}
+
+@keyframes stepPulse {
+    0%, 100% { box-shadow: 0 4px 15px rgba(252, 211, 77, 0.4); }
+    50% { box-shadow: 0 6px 25px rgba(252, 211, 77, 0.6); }
+}
+
+/* Link Hover Underline Effect */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #E91E8C, #9333EA);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* CTA Banner Wave Effect */
+@keyframes wave {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(10px, -10px) scale(1.05); }
+    50% { transform: translate(-10px, 10px) scale(0.95); }
+    75% { transform: translate(10px, 10px) scale(1.05); }
+}
+
+/* Stats Section Gradient Animation */
+.stats-section {
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+}
+
+/* Testimonial Card Slide */
+.testimonial-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Image Hover Zoom */
+.hero-dashboard img {
+    transition: transform 0.4s ease;
+}
+
+.hero-dashboard:hover img {
+    transform: scale(1.05);
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #E91E8C, #9333EA, #FCD34D);
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* Cursor Trail Dots */
+.cursor-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #E91E8C, #9333EA);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+/* Floating Elements */
+.floating-element {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(252, 211, 77, 0.2), transparent);
+    border-radius: 50%;
+    animation: floatRandom 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes floatRandom {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(50px, -50px); }
+    50% { transform: translate(-30px, 30px); }
+    75% { transform: translate(30px, 50px); }
+}
+
+/* Navbar Scrolled State */
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Selected Pricing Card */
+.pricing-card.selected {
+    border-color: #E91E8C;
+    box-shadow: 0 0 0 4px rgba(233, 30, 140, 0.15),
+                0 8px 30px rgba(233, 30, 140, 0.3);
+    transform: scale(1.02);
+}
+
+/* Price Hover Scale */
+/* REMOVED - Causes price to disappear */
+/* .pricing-card:hover .price span {
+    transform: scale(1.1);
+    display: inline-block;
+} */
+
+/* Footer Link Underline */
+.footer a {
+    position: relative;
+}
+
+.footer a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #E91E8C;
+    transition: width 0.3s ease;
+}
+
+.footer a:hover::before {
+    width: 100%;
+}
+
+/* Social Links Bounce */
+.social-links a {
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Comparison Table Row Highlight */
+.comparison-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.comparison-table tbody tr:hover {
+    background: linear-gradient(90deg, rgba(233, 30, 140, 0.05), rgba(147, 51, 234, 0.05));
+    transform: scale(1.02);
+}
+
+/* Button Magnetic Effect */
+.btn-gradient,
+.btn-light {
+    transition: transform 0.1s ease;
+}
+
+/* Icon Glow on Hover */
+.icon-box:hover,
+.service-icon:hover {
+    box-shadow: 0 0 20px rgba(233, 30, 140, 0.6);
+}
